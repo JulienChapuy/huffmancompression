@@ -7,12 +7,6 @@ Created on Sun Jan  2 22:51:31 2022
 
 from classes import Node
 
-def ASCII(msg):
-    S = ''
-    for s in msg:
-        S+= bin(ord(s))[2:]
-    return(S, len(S))
-
 def freq(msg):
     table = {}
     
@@ -98,7 +92,7 @@ def HuffmanDecompression(msg, t):
     return(msg_decompressed, len(msg_decompressed))
 
 def ASCIIvsHuffman(msg):
-    ascii_bin_msg, ascii_nb_bits = ASCII(msg)
+    ascii_nb_bits = 8*len(msg)
     
     huffman_bin_msg, huffman_nb_bits, t = HuffmanCompression(msg)
     
