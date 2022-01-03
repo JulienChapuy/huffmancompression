@@ -92,8 +92,14 @@ def HuffmanDecompression(msg, t):
     return(msg_decompressed, len(msg_decompressed))
 
 def ASCIIvsHuffman(msg):
-    ascii_nb_bits = 8*len(msg)
+    bits_ascii= 8*len(msg)
     
-    huffman_bin_msg, huffman_nb_bits, t = HuffmanCompression(msg)
+    _, bits_huff, _ = HuffmanCompression(msg)
     
-    return(ascii_nb_bits, huffman_nb_bits)
+    print('\n\n----------------------------------------'+
+          '----------------------------------------'+
+          '\nBits comparison, example : \n'
+          'Bits in ASCII format : ' + str(bits_ascii) + 
+          '\nBits in Huffman Compressed format : ' + str(bits_huff)+
+          '\nCompression rate : ' + str(100*(bits_ascii-bits_huff)/bits_ascii))
+    

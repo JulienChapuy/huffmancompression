@@ -10,3 +10,7 @@ otis = 'Mais, vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauva
 f = open('loremipsum.txt', 'r')
 lipsum = f.read()
 f.close()
+
+f = open('bible.txt', 'r')
+bible = f.read()
+f.close()
