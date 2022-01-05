@@ -38,5 +38,8 @@ from examples import lipsum
 
 AvsH(lipsum)
 
+from examples import bible
+
+AvsH(bible)
 
 
